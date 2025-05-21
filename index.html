@@ -7,9 +7,56 @@
     <link rel="stylesheet" href="./src/style.css" />
     <title>Vite + TS</title>
   </head>
-  <body>
+  <body class="md:container md:m-auto md:p-6 p-6">
     <div>
-      <h1 class="text-blue-500">Hello world</h1>
+      <header>
+        <div class="flex items-center justify-between px-6 py-4">
+          <!-- Left Side: Logo + Nav -->
+          <div class="flex items-center gap-[3rem]">
+            <!-- Logo -->
+            <div>
+              <img
+                src="./public/assets/images/logo.svg"
+                alt="Logo"
+                class="w-32"
+              />
+            </div>
+
+            <!-- Navigation Links -->
+            <nav>
+              <ul class="flex gap-6 text-gray-500">
+                <li><a href="#">Collections</a></li>
+                <li><a href="#">Mens</a></li>
+                <li><a href="#">Women</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+            </nav>
+          </div>
+
+          <!-- Right Side: Cart Icon -->
+          <div class="flex items-center gap-10">
+            <div>
+              <img
+                src="./public/assets/images/icon-cart.svg"
+                alt="Cart"
+                class="w-6"
+              />
+            </div>
+            <div>
+              <img
+                width="35"
+                src="./public/assets/images/image-avatar.png"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+        <div class="px-6 mt-[1.5rem]">
+          <div class="border-b-1 border-gray-300"></div>
+        </div>
+      </header>
+      <main></main>
     </div>
     <script type="module" src="./src/main.ts"></script>
   </body>
