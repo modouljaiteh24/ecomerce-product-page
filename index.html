@@ -5,14 +5,20 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./src/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
     <title>Vite + TS</title>
   </head>
-  <body class="md:container md:m-auto md:p-6 p-6">
+  <body class="md:container md:m-auto md:p-6">
     <div>
       <header>
-        <div class="flex items-center justify-between px-6 py-4">
+        <div class="md:flex items-center justify-between px-6 py-4">
           <!-- Left Side: Logo + Nav -->
-          <div class="flex items-center gap-[3rem]">
+          <div class="md:flex items-center gap-[3rem]">
             <!-- Logo -->
             <div>
               <img
@@ -24,7 +30,7 @@
 
             <!-- Navigation Links -->
             <nav>
-              <ul class="flex gap-6 text-gray-500">
+              <ul class="md:flex gap-6 text-gray-500">
                 <li><a href="#">Collections</a></li>
                 <li><a href="#">Mens</a></li>
                 <li><a href="#">Women</a></li>
@@ -36,15 +42,24 @@
 
           <!-- Right Side: Cart Icon -->
           <div class="flex items-center gap-10">
-            <div>
-              <img
-                src="./public/assets/images/icon-cart.svg"
-                alt="Cart"
-                class="w-6"
-              />
+            <div class="relative">
+              <div
+                class="absolute -top-3 left-4 w-5 h-5 bg-orange-500 flex justify-center items-center rounded-full text-white"
+              >
+                <span class="">3</span>
+              </div>
+              <div class="cursor-pointer w-[]">
+                <img
+                  width=""
+                  src="./public/assets/images/icon-cart.svg"
+                  alt="Cart"
+                  class="w-6"
+                />
+              </div>
             </div>
-            <div>
+            <div class="cursor-pointer">
               <img
+                class="hover:border-1 hover:border-orange-500 rounded-full"
                 width="35"
                 src="./public/assets/images/image-avatar.png"
                 alt=""
@@ -56,7 +71,88 @@
           <div class="border-b-1 border-gray-300"></div>
         </div>
       </header>
-      <main></main>
+
+      <main>
+        <section class="mt-[5rem] md:px-[6rem]">
+          <div class="md:grid md:grid-cols-2 md:gap-[3rem]">
+            <div class="">
+              <div class="w-[100%] flex justify-center">
+                <img
+                  class="md:w-[90%] h-[] md:rounded-2xl"
+                  src="./public/assets/images/image-product-1.jpg"
+                  alt=""
+                />
+              </div>
+
+              <div id="" class="flex w-[18%] gap-6 ml-8 mt-6">
+                <img
+                  id="image-product-1"
+                  class="rounded-2xl hover:border-2 hover:border-orange-500 hover:grayscale-50"
+                  src="./public/assets/images/image-product-1.jpg"
+                  alt=""
+                />
+                <img
+                  id="image-product-2"
+                  class="rounded-2xl hover:border-2 hover:border-orange-500 hover:grayscale-50"
+                  src="./public/assets/images/image-product-2.jpg"
+                  alt=""
+                />
+                <img
+                  id="image-product-3"
+                  class="rounded-2xl hover:border-2 hover:border-orange-500 hover:grayscale-50"
+                  src="./public/assets/images/image-product-3.jpg"
+                  alt=""
+                />
+                <img
+                  id="image-product-1"
+                  class="rounded-2xl hover:border-2 hover:border-orange-500 hover:grayscale-50"
+                  src="./public/assets/images/image-product-4.jpg"
+                  alt=""
+                />
+              </div>
+            </div>
+
+            <div class="w-[100%] mt-[3rem] p-6">
+              <p class="uppercase text-gray-500">Sneaker Company</p>
+              <h2 class="mt-[10px] text-[2.5rem] leading-12">
+                Fall Limited Edition <br />
+                Sneakers
+              </h2>
+              <p class="mt-[2rem] w-[90%] text-gray-500">
+                These low-profile sneakers are your perfect casual wear
+                companion. Featuring a durable rubber outer sole, they’ll
+                withstand everything the weather can offer.
+              </p>
+              <div class="mt-[1.5rem]">
+                <div class="flex items-center gap-[1rem]">
+                  <p class="sell-price text-2xl">&dollar;125.00</p>
+                  <p class="bg-black text-white rounded-[5px] px-2">50%</p>
+                </div>
+                <div>
+                  <p class="regular-price line-through mt-2 text-gray-500">
+                    &dollar;250.00
+                  </p>
+                </div>
+                <div class="mt-[2rem] md:flex gap-x-[2rem] items-center">
+                  <div
+                    class="flex space-x-10 bg-gray-100 p-4 rounded-[10px] w-[] font-bold"
+                  >
+                    <button class="text-orange-500">-</button>
+                    <div>1</div>
+                    <button class="text-orange-500">+</button>
+                  </div>
+                  <div
+                    class="flex gap-3 bg-orange-500 hover:bg-orange-400 px-[5rem] p-4 rounded-[10px]"
+                  >
+                    <img src="./public/assets/images/icon-cart.svg" alt="" />
+                    <button class="text-gray-500">Add to cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
     </div>
     <script type="module" src="./src/main.ts"></script>
   </body>
