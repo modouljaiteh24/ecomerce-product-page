@@ -12,3 +12,11 @@ h2 {
 .sell-price {
   font-weight: 500;
 }
+
+/* .cart-content {
+  display: block;
+} */
+
+.show {
+  display: none;
+}
