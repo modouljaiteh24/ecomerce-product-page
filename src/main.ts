@@ -17,6 +17,11 @@ const cartImage = document.getElementById("cart-image");
 const cartContent = document.getElementById("cart-content");
 const itemTitle = document.getElementsByClassName("item-title");
 const itemPrice = document.getElementsByClassName("item-price");
+const quantityCount = document.querySelector(
+  ".quantity-count"
+) as HTMLDivElement;
+const minusBtn = document.querySelector(".minusButton") as HTMLButtonElement;
+const plusBtn = document.querySelector(".plusButton") as HTMLButtonElement;
 // const itemImage = document.getElementsByClassName("item-image");
 
 // const addToCartButtom = document.getElementsByClassName("shop-item-button");
@@ -51,6 +56,18 @@ imageProduct4?.addEventListener("click", () => {
 // });
 
 //quantity
+let count = 1;
+minusBtn?.addEventListener("click", () => {
+  if (count > 1) {
+    count--;
+    quantistyCount.innerText = count;
+  }
+});
+
+plusBtn?.addEventListener("click", () => {
+  count++;
+  quantityCount.innerText = count;
+});
 
 //cart-content
 cartImage?.addEventListener("click", () => {
@@ -72,10 +89,11 @@ function addToCartCLicked(event) {
   // let item = button.parentElement.parentElement;
   let title = item.getElementsByClassName("item-title")[0]?.innerText;
   let price = item.getElementsByClassName("item-price")[0]?.innerText;
+  let quantity = item.getElementsByClassName("quantity-count");
   const mainImage = document.getElementsByClassName("main-image")[0]?.src;
   // console.log(mainImage);
-  console.log(title, price, mainImage);
-  addItemToCart(title, price, mainImage);
+  console.log(title, price, mainImage, quantityCount);
+  addItemToCart(title, price, mainImage, quantityCount);
 }
 
 function addItemToCart(title: itemName, price, mainImage, quantity) {
